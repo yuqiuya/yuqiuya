@@ -27,3 +27,10 @@ class SimAM(torch.nn.Module):
         y = x_minus_mu_square / (4 * (x_minus_mu_square.sum(dim=[2, 3], keepdim=True) / n + self.e_lambda)) + 0.5
 
         return x * self.activaton(y)
+
+
+if __name__ == '__main__':
+    input = torch.randn(3, 64, 7, 7)
+    model = SimAM()
+    outputs = model(input)
+    print(outputs.shape)

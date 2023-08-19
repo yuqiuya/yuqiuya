@@ -23,7 +23,7 @@ if platform.system() != 'Windows':
 
 from models.common import *  # noqa
 from models.experimental import *  # noqa
-from models.simAM import simAM
+from models.simAM import SimAM
 from utils.autoanchor import check_anchor_order
 from utils.general import LOGGER, check_version, check_yaml, make_divisible, print_args
 from utils.plots import feature_visualization
